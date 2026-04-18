@@ -1,25 +1,29 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
+      <main className="flex flex-1 items-center justify-center px-6 py-24">
+        <div className="max-w-md text-center">
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary">Error 404</p>
+          <h1 className="mt-4 text-7xl font-display font-bold text-gradient-aurora">Lost in space</h1>
+          <p className="mt-4 text-base text-muted-foreground">
+            That page hasn't been mapped yet. Let's get you back on course.
+          </p>
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="mt-8 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Return home
           </Link>
         </div>
-      </div>
+      </main>
+      <SiteFooter />
     </div>
   );
 }
@@ -29,20 +33,30 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Tensor Academy — STEM & Competitive Exam Coaching Template" },
+      {
+        name: "description",
+        content:
+          "A premium website template for STEM coaching academies, JEE/NEET preparation institutes, and tuition centers. Showcase courses, faculty, gallery, and success stories.",
+      },
+      { name: "author", content: "Tensor Academy" },
+      { property: "og:title", content: "Tensor Academy — STEM & Competitive Exam Coaching" },
+      {
+        property: "og:description",
+        content:
+          "A premium website template for STEM coaching academies. Showcase courses, faculty, facilities, and your toppers.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
       },
+      { rel: "stylesheet", href: appCss },
     ],
   }),
   shellComponent: RootShell,
@@ -52,7 +66,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
       </head>
@@ -65,5 +79,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
+      <main className="flex-1">
+        <Outlet />
+      </main>
+      <SiteFooter />
+    </div>
+  );
 }
