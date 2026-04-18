@@ -40,7 +40,7 @@ export const Route = createRootRoute({
           "A premium website template for STEM coaching academies, JEE/NEET preparation institutes, and tuition centers. Showcase courses, faculty, gallery, and success stories.",
       },
       { name: "author", content: "Tensor Academy" },
-      { property: "og:title", content: "Tensor Academy — STEM & Competitive Exam Coaching" },
+      { property: "og:title", content: "Tensor Academy — STEM & Competitive Exam Coaching Template" },
       {
         property: "og:description",
         content:
@@ -48,6 +48,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Tensor Academy — STEM & Competitive Exam Coaching Template" },
+      { name: "description", content: "Academy Showcase is a website template for tuition teachers to display their academies, courses, and student success." },
+      { property: "og:description", content: "Academy Showcase is a website template for tuition teachers to display their academies, courses, and student success." },
+      { name: "twitter:description", content: "Academy Showcase is a website template for tuition teachers to display their academies, courses, and student success." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ba3d375-5fdd-4378-b350-c63a24032924/id-preview-c1dbbbeb--a102d94a-f9df-4ab5-ad86-73c53f521f21.lovable.app-1776508750064.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1ba3d375-5fdd-4378-b350-c63a24032924/id-preview-c1dbbbeb--a102d94a-f9df-4ab5-ad86-73c53f521f21.lovable.app-1776508750064.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
