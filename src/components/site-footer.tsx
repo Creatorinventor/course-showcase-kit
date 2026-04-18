@@ -17,9 +17,9 @@ export function SiteFooter() {
             different from every other coaching center in town.
           </p>
           <div className="mt-6 space-y-2 text-sm text-muted-foreground">
-            <p className="flex items-center gap-2"><MapPin className="size-4 text-primary" /> 42 Knowledge Park, City, ST 000000</p>
-            <p className="flex items-center gap-2"><Phone className="size-4 text-primary" /> +1 (555) 010-2025</p>
-            <p className="flex items-center gap-2"><Mail className="size-4 text-primary" /> hello@tensoracademy.edu</p>
+            <p className="flex items-center gap-2"><MapPin className="size-4 text-primary" /><span>42 Knowledge Park, City, ST 000000</span></p>
+            <p className="flex items-center gap-2"><Phone className="size-4 text-primary" /><span>+1 (555) 010-2026</span></p>
+            <p className="flex items-center gap-2"><Mail className="size-4 text-primary" /><span>hello@tensoracademy.edu</span></p>
           </div>
         </div>
 

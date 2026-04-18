@@ -47,7 +47,7 @@ function HomePage() {
         <div className="relative mx-auto grid w-full max-w-7xl gap-12 px-4 pt-16 pb-20 md:px-8 lg:grid-cols-12 lg:pt-24 lg:pb-28">
           <div className="lg:col-span-7 flex flex-col justify-center">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-primary">
-              <Sparkles className="size-3.5" /> Admissions Open · 2025 Batch
+              <Sparkles className="size-3.5" /> Admissions Open · 2026 Batch
             </div>
 
             <h1 className="mt-6 text-balance text-5xl font-display font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-[5.5rem]">
@@ -199,7 +199,7 @@ function HomePage() {
             <div className="absolute -bottom-32 -left-32 size-96 rounded-full bg-accent/20 blur-3xl" />
             <div className="relative">
               <h2 className="max-w-2xl text-balance text-4xl font-display font-bold sm:text-5xl md:text-6xl">
-                Your seat in the <span className="text-gradient-aurora">2025 batch</span> is waiting.
+                Your seat in the <span className="text-gradient-aurora">2026 batch</span> is waiting.
               </h2>
               <p className="mt-4 max-w-xl text-lg text-muted-foreground">
                 Book a free demo class today. Bring a parent. Ask hard questions. We'll prove it.
